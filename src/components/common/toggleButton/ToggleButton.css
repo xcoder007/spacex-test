@@ -1,0 +1,13 @@
+
+button.toggle-button  {
+    background-color: #cde6b2eb;
+    border: #98bb6e 1px solid;
+    border-radius: 2px;
+    margin: 4px;
+    max-width: 60px;
+}
+
+button.toggle-button.selected {
+    background-color: #61a716eb;
+    border: #3a4928 1px solid;
+}
