@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.prod.config.js",
     "lint-fix": "eslint --fix \"src/**/*.(js|jsx)",
     "format-fix": "prettier --write \"src/**/*.(js|jsx)",
-    "format-fix-root-js": "prettier --write \"*webpack.*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

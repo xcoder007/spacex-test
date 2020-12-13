@@ -1,18 +1,18 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-process.env.BABEL_ENV = "development";
-process.env.NODE_ENV = "development";
+process.env.BABEL_ENV = "production";
+process.env.NODE_ENV = "production";
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     publicPath: "/",
     filename: "bundle.js",
   },
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./build",
   },
   devtool: "source-map",
   resolve: {
