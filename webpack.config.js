@@ -27,7 +27,6 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              // presets: ["es2015", "react"],
               customize: require.resolve(
                 "babel-preset-react-app/webpack-overrides"
               ),
