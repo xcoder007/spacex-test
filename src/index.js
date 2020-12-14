@@ -5,6 +5,8 @@ import LaunchProgramView from "./components/launchPrograms/container/launchProgr
 import configureStore from "./store/configureStore";
 import { Provider } from "react-redux";
 
+import "./css/commonStyles.css";
+
 const store = configureStore();
 
 ReactDOM.render(

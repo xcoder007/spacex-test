@@ -14,7 +14,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    /* width: 100%; */
+    width: 100%;
     /* padding: 5px; */
     /* margin-right: -10px; */
     box-sizing: border-box;
@@ -97,6 +97,26 @@
     /* max-width: 100%; */
     padding: 6px;
     border-radius: 4px;
+    font-size: .7em;
+}
+
+.launch-item .header {
+    margin: 10px 0px;
+    color: #6060f7;
+}
+
+.launch-item div {
+    color: #9a9af3;
+    font-weight: bold;
+}
+
+.launch-item div > label {
+    color: black;
+    font-weight: bold;
+}
+
+.launch-item div > ul {
+    margin: 4px 2px;
 }
 
 .launch-item img {
@@ -135,5 +155,5 @@
 }
 
 .launch-container .footer {
-    margin: 5px auto;
+    justify-content: space-around;
 }

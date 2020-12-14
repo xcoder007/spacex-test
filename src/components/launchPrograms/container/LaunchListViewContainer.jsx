@@ -9,6 +9,7 @@ const LaunchListViewContainer = ({ launchData }) => (
 const mapStateToProps = (state) => {
   return {
     launchData: state.launch.data || [],
+    // launchData: [],
   };
 };
 
