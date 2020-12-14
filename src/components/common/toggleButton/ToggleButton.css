@@ -3,8 +3,7 @@ button.toggle-button  {
     background-color: #cde6b2eb;
     border: #98bb6e 1px solid;
     border-radius: 2px;
-    margin: 4px;
-    max-width: 60px;
+    min-height: 20px;
 }
 
 button.toggle-button.selected {

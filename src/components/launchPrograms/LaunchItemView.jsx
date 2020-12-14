@@ -20,7 +20,7 @@ const LaunchItemView = ({ launchDetails = {} }) => {
     [LAUNCH_SUCCESS]: launchSuccess,
   } = launchDetails;
   return (
-    <div className="launch-item col col-sm-6 col-md-3">
+    <div className="launch-item col col-sm-4 col-md-3">
       <div>
         <img src={links[MISSION_PATCH_SMALL]} alt="Not found" />
       </div>
