@@ -3,43 +3,23 @@
     padding: 10px;
 }
 
-/* .launch-container .header {
-    width: 100%;
-} */
+.launch-container .footer {
+    justify-content: space-around;
+}
 
 .launch-container h4 {
     margin: 2px 0px;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    /* padding: 5px; */
-    /* margin-right: -10px; */
-    box-sizing: border-box;
-    justify-content: space-between;
-    /* background-color: #dad6d6; */
+.launch-container button:focus {
+    outline: #68972e 1px solid;
 }
 
-.col {
+
+.launch-data-content {
+    /* margin: 0px auto; */
     width: 100%;
-    /* padding: 5px; */
-    margin: 5px 0px;
-    box-sizing: border-box;
-    /* background-color: white; */
 }
-.col-xs-11 {width: 91.662%}
-.col-xs-10 {width: 83.332%;}
-.col-xs-9 {width: 75%;}
-.col-xs-8 {width: 66.662%;}
-.col-xs-7 {width: 58.331%}
-.col-xs-6 {width: 50%;}
-.col-xs-5 {width: 41.662%}
-.col-xs-4 {width: 33.332%;}
-.col-xs-3 {width: 25%;}
-.col-xs-2 {width: 16.662%;}
-.col-xs-1 {width: 8.332%;}
 
 @media screen and (min-width: 700px) {
     .filter-container {
@@ -49,46 +29,16 @@
     .launch-data-content {
         padding-left: 8px;
     }
-  
-    .col-sm-11 {width: 91.662%}
-    .col-sm-10 {width: 83.332%;}
-    .col-sm-9 {width: 75%;}
-    .col-sm-8 {width: 66.662%;}
-    .col-sm-7 {width: 58.331%}
-    .col-sm-6 {width: 50%;}
-    .col-sm-5 {width: 41.662%}
-    .col-sm-4 {width: 32.332%;}
-    .col-sm-3 {width: 25%;}
-    .col-sm-2 {width: 16.662%;}
-    .col-sm-1 {width: 8.332%;}
 }
 
 @media screen and (min-width: 1024px) {
     .filter-container {
-        /* margin-right: 10px; */
         margin-top: 6px;
     }
 
     .launch-data-content {
         padding-left: 8px;
     }
-
-    .col-md-11 {width: 91.662%}
-      .col-md-10 {width: 83.332%;}
-      .col-md-9 {width: 75%;}
-      .col-md-8 {width: 66.662%;}
-      .col-md-7 {width: 58.331%}
-      .col-md-6 {width: 50%;}
-      .col-md-5 {width: 41.662%}
-      .col-md-4 {width: 33.332%;}
-      .col-md-3 {width: 24%;}
-      .col-md-2 {width: 16.662%;}
-      .col-md-1 {width: 8.332%;}
-  }
-
-
-.launch-container button:focus {
-    outline: #68972e 1px solid;
 }
 
 .launch-item {
@@ -99,6 +49,7 @@
     border-radius: 4px;
     font-size: .7em;
 }
+
 
 .launch-item .header {
     margin: 10px 0px;
@@ -128,10 +79,6 @@
     background-color: #dad6d6;;
 }
 
-.launch-data-content {
-    /* margin: 0px auto; */
-    width: 100%;
-}
 
 /* Filter */
 .filter-container {
@@ -152,8 +99,4 @@
 
 .filter-container button.toggle-button {
     width: 40%;
-}
-
-.launch-container .footer {
-    justify-content: space-around;
 }
