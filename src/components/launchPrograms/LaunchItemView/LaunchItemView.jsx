@@ -9,7 +9,9 @@ import {
   MISSION_ID,
   MISSION_NAME,
   MISSION_PATCH_SMALL,
-} from "../../constants/launchDataDefs";
+} from "../../../constants/launchDataDefs";
+
+import "./LaunchItemView.css";
 
 const LaunchItemView = ({ launchDetails = {} }) => {
   const {

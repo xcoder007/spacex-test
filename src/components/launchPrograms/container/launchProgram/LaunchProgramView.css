@@ -19,42 +19,6 @@
     width: 100%;
 }
 
-.launch-item {
-    background-color: white;
-    padding: 6px;
-    border-radius: 4px;
-    font-size: .7em;
-}
-
-
-.launch-item .header {
-    margin: 10px 0px;
-    color: #6060f7;
-}
-
-.launch-item div {
-    color: #9a9af3;
-    font-weight: bold;
-}
-
-.launch-item div > label {
-    color: black;
-    font-weight: bold;
-}
-
-.launch-item div > ul {
-    margin: 4px 2px;
-}
-
-.launch-item img {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    align-content: center;
-    vertical-align: middle;
-    background-color: #dad6d6;;
-}
-
 
 /* Filter */
 .filter-container {

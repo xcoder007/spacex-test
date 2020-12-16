@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FLIGHT_NUMBER } from "../../constants/launchDataDefs";
-import LaunchItemView from "./LaunchItemView";
+import LaunchItemView from "./LaunchItemView/LaunchItemView";
 
 const LaunchListView = ({ launchData }) => (
   <div className="row launch-data-content">
