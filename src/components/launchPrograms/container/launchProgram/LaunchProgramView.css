@@ -15,36 +15,12 @@
     outline: #68972e 1px solid;
 }
 
-
 .launch-data-content {
-    /* margin: 0px auto; */
     width: 100%;
 }
 
-@media screen and (min-width: 700px) {
-    .filter-container {
-        margin-top: 6px;
-    }
-
-    .launch-data-content {
-        padding-left: 8px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .filter-container {
-        margin-top: 6px;
-    }
-
-    .launch-data-content {
-        padding-left: 8px;
-    }
-}
-
 .launch-item {
-    /* margin: 0px auto; */
     background-color: white;
-    /* max-width: 100%; */
     padding: 6px;
     border-radius: 4px;
     font-size: .7em;
@@ -83,7 +59,6 @@
 /* Filter */
 .filter-container {
     max-width: 100%;
-    /* margin: 0px auto; */
     background-color: white;
     padding: 6px;
     border-radius: 4px;
@@ -99,4 +74,24 @@
 
 .filter-container button.toggle-button {
     width: 40%;
+}
+
+@media screen and (min-width: 700px) {
+    .filter-container {
+        margin-top: 6px;
+    }
+
+    .launch-data-content {
+        padding-left: 8px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .filter-container {
+        margin-top: 6px;
+    }
+
+    .launch-data-content {
+        padding-left: 8px;
+    }
 }
