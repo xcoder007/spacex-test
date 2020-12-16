@@ -1,2 +1,4 @@
 node_modules
+clint/node_modules
 build
+static
