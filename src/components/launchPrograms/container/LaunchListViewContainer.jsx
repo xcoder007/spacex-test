@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import LaunchListView from "../LaunchListView";
+import LaunchListView from "../LaunchListView/LaunchListView";
 
 const LaunchListViewContainer = ({ launchData }) => (
   <LaunchListView launchData={launchData} />

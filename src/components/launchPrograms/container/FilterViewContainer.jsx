@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchLaunchData } from "../../../actions/launchActions";
-import FilterView from "../FilterView";
+import FilterView from "../FilterView/FilterView";
 
 const FilterViewContainer = ({ fetchLaunchData }) => (
   <FilterView onSearch={fetchLaunchData} />

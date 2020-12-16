@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import ToggleButton from "../common/toggleButton/ToggleButton";
+import ToggleButton from "../../common/toggleButton/ToggleButton";
 
 export default class FilterView extends Component {
   constructor() {
