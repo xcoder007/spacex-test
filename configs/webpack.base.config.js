@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 const path = require("path");
 const fs = require("fs");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
@@ -68,6 +69,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: INDEX_HTML,
     }),
