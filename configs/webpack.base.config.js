@@ -4,6 +4,7 @@ const fs = require("fs");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = (relativePath) => path.resolve(appDirectory, relativePath);
@@ -75,6 +76,11 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [{ from: PUBLIC_DIR, to: PUBLIC_OUT_DIR }],
+    }),
+    new ESLintPlugin({
+      extensions: ["js", "jsx"],
+      lintDirtyModulesOnly: true,
+      failOnError: true,
     }),
   ],
 };
