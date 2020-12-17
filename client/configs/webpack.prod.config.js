@@ -9,6 +9,7 @@ process.env.NODE_ENV = "production";
 module.exports = merge(baseConfig, {
   mode: "production",
   optimization: {
+    usedExports: true,
     minimize: true,
     minimizer: [new OptimizeCSSPlugin()],
   },
