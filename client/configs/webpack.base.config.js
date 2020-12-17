@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 // const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
@@ -67,6 +68,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: INDEX_HTML,
     }),
