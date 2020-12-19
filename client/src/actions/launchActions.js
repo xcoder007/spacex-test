@@ -11,13 +11,6 @@ import {
   LAUNCH_DATA_REQUEST_SUCCESS,
 } from "./actionTypes";
 
-// const doFetch = async (url, header) => {
-//     const response = await fetch(url, header);
-//     const result = await response.json();
-
-//     return result;
-// }
-
 export function fetchLaunchData(filter) {
   return async (dispatch, getState) => {
     const state = getState();
