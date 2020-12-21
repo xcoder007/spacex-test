@@ -7,9 +7,9 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "webpack-dev-server --config configs/webpack.dev.config.js",
+    "start-dev": "webpack-dev-server --config configs/webpack.dev.config.js",
     "build": "webpack --mode production --config configs/webpack.prod.config.js",
-    "heroku-start": "node server/server.js",
+    "start": "node server/server.js",
     "heroku-postbuild": "npm run build",
     "lint-fix": "eslint --fix \"src/**/*.(js|jsx)",
     "format-fix": "prettier --write \"src/**/*.(js|jsx)",
