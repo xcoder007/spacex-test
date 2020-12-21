@@ -11,7 +11,7 @@ const SRC_DIR = resolvePath("src");
 const INDEX_HTML = resolvePath("index.html");
 // const PUBLIC_DIR = resolvePath("public");
 const BUILD_DIR = resolvePath("./static");
-
+console.log("Build_Dir ", BUILD_DIR);
 module.exports = {
   appDir: appDirectory,
   srcDir: SRC_DIR,
