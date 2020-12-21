@@ -9,21 +9,25 @@ export default class FilterView extends Component {
       selectedYear: null,
     };
 
-    this.handleSuccessfullLaunchTrueChanged = this.handleTrueToggleChanged.bind(
+    this.handleSuccessfullLaunchTrueChanged = this.handleToggleChange.bind(
       this,
-      "isSuccessfullLaunch"
+      "isSuccessfullLaunch",
+      true
     );
-    this.handleSuccessfullLaunchFalseChanged = this.handleFalseToggleChanged.bind(
+    this.handleSuccessfullLaunchFalseChanged = this.handleToggleChange.bind(
       this,
-      "isSuccessfullLaunch"
+      "isSuccessfullLaunch",
+      false
     );
-    this.handleSuccessfullLandingTrueChanged = this.handleTrueToggleChanged.bind(
+    this.handleSuccessfullLandingTrueChanged = this.handleToggleChange.bind(
       this,
-      "isSuccessfullLanding"
+      "isSuccessfullLanding",
+      true
     );
-    this.handleSuccessfullLandingFalseChanged = this.handleFalseToggleChanged.bind(
+    this.handleSuccessfullLandingFalseChanged = this.handleToggleChange.bind(
       this,
-      "isSuccessfullLanding"
+      "isSuccessfullLanding",
+      false
     );
   }
 
@@ -59,18 +63,14 @@ export default class FilterView extends Component {
     return years;
   }
 
-  handleTrueToggleChanged(field, isSelected) {
+  handleToggleChange(field, valueOnSelection, isSelected) {
     const { onSearch } = this.props;
-    this.setState({ [field]: isSelected ? true : undefined }, () => {
-      onSearch(this.state);
-    });
-  }
-
-  handleFalseToggleChanged(field, isSelected) {
-    const { onSearch } = this.props;
-    this.setState({ [field]: isSelected ? false : undefined }, () => {
-      onSearch(this.state);
-    });
+    this.setState(
+      { [field]: isSelected ? valueOnSelection : undefined },
+      () => {
+        onSearch(this.state);
+      }
+    );
   }
 
   render() {
