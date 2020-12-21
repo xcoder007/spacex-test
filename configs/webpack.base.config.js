@@ -1,22 +1,9 @@
-// const path = require("path");
-// const fs = require("fs");
-// const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
 const paths = require("./paths");
-
-// const appDirectory = fs.realpathSync(process.cwd());
-// const resolvePath = (relativePath) => path.resolve(appDirectory, relativePath);
-
-// // const WEBPACK_DIR = __dirname;
-// const SRC_DIR = resolvePath("src");
-// const INDEX_HTML = resolvePath("index.html");
-// // const PUBLIC_DIR = resolvePath("public");
-// const BUILD_DIR = resolvePath("./static");
-// // const PUBLIC_OUT_DIR = resolvePath("../bundles");
 
 module.exports = {
   entry: paths.clientEntryFile,
@@ -27,7 +14,7 @@ module.exports = {
     filename: "[name]-[hash].js",
   },
   devServer: {
-    contentBase: paths.buildDir, // "./build",
+    contentBase: paths.buildDir,
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -77,9 +64,6 @@ module.exports = {
     new ExtractCssChunks({
       filename: "[name]-[hash].css",
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: PUBLIC_DIR, to: PUBLIC_OUT_DIR }],
-    // }),
     new ESLintPlugin({
       extensions: ["js", "jsx"],
       lintDirtyModulesOnly: true,
