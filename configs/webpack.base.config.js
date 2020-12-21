@@ -1,31 +1,33 @@
-const path = require("path");
-const fs = require("fs");
+// const path = require("path");
+// const fs = require("fs");
 // const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
-const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = (relativePath) => path.resolve(appDirectory, relativePath);
+const paths = require("./paths");
 
-// const WEBPACK_DIR = __dirname;
-const SRC_DIR = resolvePath("src");
-const INDEX_HTML = resolvePath("index.html");
-// const PUBLIC_DIR = resolvePath("public");
-const BUILD_DIR = resolvePath("../static");
-// const PUBLIC_OUT_DIR = resolvePath("../bundles");
+// const appDirectory = fs.realpathSync(process.cwd());
+// const resolvePath = (relativePath) => path.resolve(appDirectory, relativePath);
+
+// // const WEBPACK_DIR = __dirname;
+// const SRC_DIR = resolvePath("src");
+// const INDEX_HTML = resolvePath("index.html");
+// // const PUBLIC_DIR = resolvePath("public");
+// const BUILD_DIR = resolvePath("./static");
+// // const PUBLIC_OUT_DIR = resolvePath("../bundles");
 
 module.exports = {
-  entry: path.join(SRC_DIR, "index.js"),
+  entry: paths.clientEntryFile,
   output: {
-    path: BUILD_DIR,
+    path: paths.buildDir,
     publicPath: "/",
     chunkFilename: "[name]-[hash].js",
     filename: "[name]-[hash].js",
   },
   devServer: {
-    contentBase: BUILD_DIR, // "./build",
+    contentBase: paths.buildDir, // "./build",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -70,7 +72,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: INDEX_HTML,
+      template: paths.indexHtml,
     }),
     new ExtractCssChunks({
       filename: "[name]-[hash].css",
